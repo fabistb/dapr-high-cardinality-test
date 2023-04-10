@@ -1,0 +1,2 @@
+### Serivice Invocation
+POST http://localhost:5070/api/HighCardinality/service-invocation
