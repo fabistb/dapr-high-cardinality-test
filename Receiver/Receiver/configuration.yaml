@@ -21,3 +21,8 @@ spec:
       - name: method
         regex:
           "api/Receive/": "api/Receive/.+"
+    - name: dapr_http_client_roundtrip_latency
+      labels:
+      - name: method
+        regex:
+          "api/Receive/": "api/Receive/.+"
