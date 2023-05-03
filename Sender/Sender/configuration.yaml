@@ -28,16 +28,26 @@ spec:
             "api/Receive/": "api/Receive/.+"
     - name: dapr_http_server_response_count
       labels:
-        - name: method
+        - name: path
           regex:
             "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
     - name: dapr_http_server_request_count
       labels:
-        - name: method
+        - name: path
           regex:
             "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
     - name: dapr_http_server_latency
       labels:
-        - name: method
+        - name: path
+          regex:
+            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
+    - name: dapr_http_server_latency_count
+      labels:
+        - name: path
+          regex:
+            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
+    - name: dapr_http_server_latency_sum
+      labels:
+        - name: path
           regex:
             "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
