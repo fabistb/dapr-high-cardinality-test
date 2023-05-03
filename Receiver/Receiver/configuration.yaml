@@ -21,3 +21,28 @@ spec:
       - name: method
         regex:
           "api/Receive/": "api/Receive/.+"
+    - name: dapr_http_client_roundtrip_latency
+      labels:
+      - name: path
+        regex:
+          "api/Receive/": "api/Receive/.+"
+    - name: dapr_http_client_completed_count
+      labels:
+        - name: path
+          regex:
+            "api/Receive/": "api/Receive/.+"
+    - name: dapr_http_client_sent_bytes_sum
+      labels:
+        - name: path
+          regex:
+            "api/Receive/": "api/Receive/.+"
+    - name: dapr_http_client_sent_bytes
+      labels:
+        - name: path
+          regex:
+            "api/Receive/": "api/Receive/.+"
+    - name: dapr_runtime_acl_global_policy_action_allowed_total
+      labels:
+        - name: operation
+          regex:
+            "api/Receive/": "api/Receive/.+"
