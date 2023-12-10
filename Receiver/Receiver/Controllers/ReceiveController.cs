@@ -11,4 +11,10 @@ public class ReceiveController : ControllerBase
     {
         return new OkObjectResult(id);
     }
+
+    [HttpPost("{id}/value")]
+    public async Task<IActionResult> ResponseValue([FromRoute] string id)
+    {
+        return new OkObjectResult(id);
+    }
 }

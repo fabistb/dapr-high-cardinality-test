@@ -25,4 +25,20 @@ public class ServiceInvocationService : IServiceInvocationService
             }
         }
     }
+
+    public async Task InvokeDynamicPathAsync()
+    {
+        for (var i = 0; i < 100; i++)
+        {
+            var number = i.ToString();
+            var request =
+                _daprClient.CreateInvokeMethodRequest(HttpMethod.Post, "receiver", $"api/Receive/{number}/value");
+            var response = await _daprClient.InvokeMethodWithResponseAsync(request);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Invalid response");
+            }
+        }
+    }
 }

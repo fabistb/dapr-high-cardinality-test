@@ -19,4 +19,10 @@ public class HighCardinalityController : ControllerBase
     {
         await _serviceInvocationService.InvokeAsync();
     }
+
+    [HttpPost("service-invocation-dynamic-path")]
+    public async Task ServiceInvocationDynamicPath()
+    {
+        await _serviceInvocationService.InvokeDynamicPathAsync();
+    }
 }
