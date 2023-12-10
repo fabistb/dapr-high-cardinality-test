@@ -1,2 +1,5 @@
-### Serivice Invocation
+### Service Invocation
 POST http://localhost:5070/api/HighCardinality/service-invocation
+
+### Service Invocation Path
+POST http://localhost:5070/api/HighCardinality/service-invocation-dynamic-path
