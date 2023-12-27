@@ -25,4 +25,10 @@ public class HighCardinalityController : ControllerBase
     {
         await _serviceInvocationService.InvokeDynamicPathAsync();
     }
+
+    [HttpPost("service-invocation-multiple-dynamic-values")]
+    public async Task ServiceInvocationMultipleDynamic()
+    {
+        await _serviceInvocationService.InvokeMultipleAsync();
+    }
 }

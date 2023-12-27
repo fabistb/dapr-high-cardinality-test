@@ -41,4 +41,23 @@ public class ServiceInvocationService : IServiceInvocationService
             }
         }
     }
+
+    public async Task InvokeMultipleAsync()
+    {
+        for (var i = 0; i < 100; i++)
+        {
+            for (var l = 0; l < 100; l++)
+            {
+                var request =
+                    _daprClient.CreateInvokeMethodRequest(HttpMethod.Post, "receiver", $"api/Receive/{i}/value/{l}");
+
+                var response = await _daprClient.InvokeMethodWithResponseAsync(request);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception("Invalid response");
+                }
+            }
+        }
+    }
 }

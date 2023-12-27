@@ -17,4 +17,16 @@ public class ReceiveController : ControllerBase
     {
         return new OkObjectResult(id);
     }
+
+    [HttpPost("{id}/value/{number}")]
+    public async Task<IActionResult> ResponseValueMultiple([FromRoute] string id, [FromRoute] string number)
+    {
+        var returnObject = new
+        {
+            id,
+            number
+        };
+
+        return new OkObjectResult(returnObject);
+    }
 }
