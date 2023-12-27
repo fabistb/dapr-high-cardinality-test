@@ -3,3 +3,6 @@ POST http://localhost:5070/api/HighCardinality/service-invocation
 
 ### Service Invocation Path
 POST http://localhost:5070/api/HighCardinality/service-invocation-dynamic-path
+
+### Service Invocation Multiple
+POST http://localhost:5070/api/HighCardinality/service-invocation-multiple-dynamic-values
