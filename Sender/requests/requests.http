@@ -6,3 +6,6 @@ POST http://localhost:5070/api/HighCardinality/service-invocation-dynamic-path
 
 ### Service Invocation Multiple
 POST http://localhost:5070/api/HighCardinality/service-invocation-multiple-dynamic-values
+
+### Actor Invocation
+POST http://localhost:5070/api/Actor/actor-invocation
