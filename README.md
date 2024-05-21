@@ -125,5 +125,14 @@ spec:
 ```
 
 # Dapr 1.13.x
-With Dapr 1.13.x a new configuration has been  `spec.metric.http.increasedCardinality`.
+With Dapr 1.13.x a new configuration has been `spec.metric.http.increasedCardinality`.
 Setting the value to `false` will automatically filter out all high cardinality metrics.
+Setting the value to `true` will set the 
+
+## Actor issue
+With Dapr 1.13.x a small bug was introduced regarding actor high cardinality metrics.
+Previous to 1.13.x Actors didn't create any high cardinality metrics at all.
+With 1.13.x suddenly these metrics appeared and they also aren't affected by the `spec.metric.http.increasedCardinality` configuration.
+
+
+[GitHub Issue](https://github.com/dapr/dapr/issues/7736)
