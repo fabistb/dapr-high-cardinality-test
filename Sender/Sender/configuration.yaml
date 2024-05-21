@@ -10,44 +10,5 @@ spec:
       endpointAddress: "http://localhost:9411/api/v2/spans"
   metric:
     enabled: true
-    rules:
-    - name: dapr_runtime_service_invocation_req_sent_total
-      labels:
-        - name: method
-          regex:
-            "api/Receive/": "api/Receive/.+"
-    - name: dapr_runtime_service_invocation_res_recv_total
-      labels:
-        - name: method
-          regex:
-            "api/Receive/": "api/Receive/.+"
-    - name: dapr_runtime_service_invocation_res_recv_latency_ms
-      labels:
-        - name: method
-          regex:
-            "api/Receive/": "api/Receive/.+"
-    - name: dapr_http_server_response_count
-      labels:
-        - name: path
-          regex:
-            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
-    - name: dapr_http_server_request_count
-      labels:
-        - name: path
-          regex:
-            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
-    - name: dapr_http_server_latency
-      labels:
-        - name: path
-          regex:
-            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
-    - name: dapr_http_server_latency_count
-      labels:
-        - name: path
-          regex:
-            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
-    - name: dapr_http_server_latency_sum
-      labels:
-        - name: path
-          regex:
-            "/v1.0/invoke/receiver/method/api/Receive/": "/v1.0/invoke/receiver/method/api/Receive/.+"
+    http:
+      increasedCardinality: false
