@@ -1,6 +1,6 @@
 # dapr-high-cardinality-test
 Sample repository to test the high cardinality functionality from dapr described here:
-https://docs.dapr.io/operations/monitoring/metrics/metrics-overview/#high-cardinality-metrics
+https://docs.dapr.io/operations/observability/metrics/metrics-overview/#high-cardinality-metrics
 
 # Dapr Version
 Depending on the Dapr version the behavior regarding the high cardinality and the required configuration can change.
